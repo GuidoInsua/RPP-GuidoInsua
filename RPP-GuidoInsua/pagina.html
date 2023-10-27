@@ -1,0 +1,125 @@
+<!-- RPP Guido Insua -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabla de Heroes y Villanos (Guido)</title>
+    <link rel="stylesheet" type="text/css" href="Estilos.css">
+</head>
+<body>
+    <div id="primerForm">
+        <h4 id="tituloForm">Form Datos</h4>
+        
+        <div id="dropDown">
+            <p>Filtrar por: </p>
+            <select id="filtros">
+                <option value="todos">Todos</option>
+                <option value="heroe">Heroe</option>
+                <option value="villano">Villano</option>
+            </select>
+        </div>
+        
+        <div id="checkboxes">
+            <label><input type="checkbox" columna="colId" checked> ID</label>
+            <label><input type="checkbox" columna="colNombre" checked> Nombre</label>
+            <label><input type="checkbox" columna="colApellido" checked> Apellido</label>
+            <label><input type="checkbox" columna="colEdad" checked> Edad</label>
+            <label><input type="checkbox" columna="colAlterEgo" checked> Alter Ego</label>
+            <label><input type="checkbox" columna="colCiudad" checked> Ciudad</label>
+            <label><input type="checkbox" columna="colPublicado" checked> Publicado</label>
+            <label><input type="checkbox" columna="colEnemigo" checked> Enemigo</label>
+            <label><input type="checkbox" columna="colRobos" checked> Robos</label>
+            <label><input type="checkbox" columna="colAsesiatos" checked> Asesinatos</label>
+        </div>
+
+        <div id="promedioEdad">
+            <p>Calcular edad promedio: </p>
+            <input type="text" id="txtPromedio">
+            <button id="calcular">Calcular</button>
+        </div>
+
+        <br>
+
+        <div id="tabla"> 
+            <table id="tablaHeader">
+                <thead>
+                    <tr>
+                        <th class="colId" id="id">ID</th>
+                        <th class="colNombre" id="nombre">Nombre</th>
+                        <th class="colApellido" id="apellido">Apellido</th>
+                        <th class="colEdad" id="edad">Edad</th>
+                        <th class="colAlterEgo" id="alterEgo">Alter Ego</th>
+                        <th class="colCiudad" id="ciudad">Ciudad</th>
+                        <th class="colPublicado" id="publicado">Publicado</th>
+                        <th class="colEnemigo" id="enemigo">Enemigo</th>
+                        <th class="colRobos" id="robos">Robos</th>
+                        <th class="colAsesiatos" id="asesinatos">Asesinatos</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaCuerpo"></tbody>
+            </table>
+        </div>
+
+        <br>
+        <button class="ultimo" id="agregar">Agregar</button>
+    </div>
+
+    <br>
+
+    <div id="ABM">
+        <h4>Form ABM</h4>
+        <div id="entradas">
+            <label for="idAbm">Id:</label>
+            <input type="text" id="idAbm" disabled>
+            <br>
+            <label for="nombreAbm">Nombre:</label>
+            <input type="text" id="nombreAbm">
+            <br>
+            <label for="apellidoAbm">Apellido:</label>
+            <input type="text" id="apellidoAbm">
+            <br>
+            <label for="edadAbm">Edad:</label>
+            <input type="text" id="edadAbm">
+            <br>
+            <label for="tipoAbm">Tipo:</label>
+            <select id="tipoAbm">
+                <option value="heroe">Heroe</option>
+                <option value="villano">Villano</option>
+            </select>
+            <br>
+            <div id="datosHeroe">
+                <label for="alterEgoAbm">Alter Ego:</label>
+                <input type="text" id="alterEgoAbm">
+                <br>
+                <label for="ciudadAbm">Ciudad:</label>
+                <input type="text" id="ciudadAbm">
+                <br>
+                <label for="publicadoAbm">Publicado:</label>
+                <input type="text" id="publicadoAbm">
+                <br>
+            </div>
+            <div id="datosVillano">
+                <label for="enemigoAbm">Enemigo:</label>
+                <input type="text" id="enemigoAbm">
+                <br>
+                <label for="robosAbm">Robos:</label>
+                <input type="text" id="robosAbm">
+                <br>
+                <label for="asesinatosAbm">Asesinatos:</label>
+                <input type="text" id="asesinatosAbm">
+                <br>
+            </div>
+        </div>
+        <div id="botonesABM">
+            <br>
+            <button id="agregarAbm">Agregar</button>
+            <button id="modificarAbm">Modificar</button>
+            <button id="eliminarAbm">Eliminar</button>
+            <button class="ultimo" id="cancelarAbm">Cancelar</button>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="Codigo.js"></script>
+</body>
+</html>
